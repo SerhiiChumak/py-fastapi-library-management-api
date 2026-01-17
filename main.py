@@ -3,8 +3,8 @@ from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 
 import crud, schemas
-from db.engine import SessionLocal, engine
-from db import models
+from database import SessionLocal, engine
+import models
 
 # Create the database tables
 models.Base.metadata.create_all(bind=engine)
